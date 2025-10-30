@@ -1,0 +1,42 @@
+Basic Commands
+FileSystems
+Users and Group Management
+File Permissions and Ownership
+process management 
+Package management
+Repository Mangement
+Networking
+Firewall management
+ssh configuration
+Systems Monitoring
+	top, htop, vmstat, iostat
+Log Management
+	/var/log/
+Backup and Restore
+	rsync, tar, zip, cron
+
+#### Advance Topics ####
+Scripting and Automation
+LVM and RAID
+Virtualization and Containers
+
+#### Storage and FileSystems ####
+Partition: fdisk, parted
+File System Management: mkfs, fsck, resize2fs, tune2fs
+Mounting and Unmounting: mount, unmount, /etc/fstab
+
+#### Security ####
+SeLinux Confiuration and management
+AppArmor: understand and configuration apparmor
+File integrity Monitoring: Tools like AIDE, Tripwire
+Audit logs
+
+#### High Availability and Load Balancing ####
+High Availability: Pacemaker and corosync
+Load Balancing: Nginx, HAProxy
+
+#### Troubleshooting and Diagonistic ####
+System Logs
+System Recovery 
+Diagonistic Tools: strace, lsof, dstat
+

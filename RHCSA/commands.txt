@@ -1,0 +1,84 @@
+======== Linux Commands RHCSA ========
+
+
+1. file Display the file type
+The file command scans the compiled header of a file for a 2-digit magic number and displays its type
+e.g
+	file /etc/passwd
+	file /bin/passwd
+
+=======> View the content <=======
+1. cat
+2. less
+	less is used to view the content of lareg file page by page. we can scrol up and down with up/down keys
+3. head
+4. tail
+	The head and tail commands display the beginning and the end of a file, respectively. By default, these commands display 10 lines of the file
+5. wc
+	The wc command counts lines, words, and characters in a file
+	a. wc -l /etc/passwd ; wc -l /etc/group
+	b. wc -c /etc/group /etc/hosts
+
+6. History
+	!string ()
+	!number. It will triger the same command which comes with that number. 
+		 history
+			23 clear
+			24 who
+			25 pwd
+			26 ls /etc
+		!25
+		it will execute `pwd` command
+7. 
+   Shortcut Description
+   Ctrl+A --> Jump to the beginning of the command line.
+   Ctrl+E --> Jump to the end of the command line.
+   Ctrl+U --> Clear from the cursor to the beginning of the command line.
+   Ctrl+K --> Clear from the cursor to the end of the command line.
+   Ctrl+R Search the history list of commands for a pattern.
+
+8. !!
+	Repeate the previous command
+
+Questions / Confusions
+1. tty
+2. console, terminal, shell
+3. Hard links/Soft link
+
+9. rmdir, rm -ri 
+10. command substituation
+	echo The time is $(date +%M) minutes past $(date +%l%p).
+
+11. Protecting Arguments from Expansion
+	The backslash (\) is an escape character in the Bash shell.
+
+	Note: single qute and double qute
+			Single quotation marks stop all shell expansion. Double quotation marks stop most shell expansion.
+	If we use single qutation, it will consider everything as string, all variables in single quation also remain string
+	If we use double qutation, all the variable will be used as variable
+
+	echo "Will variable $myhost evaluate to $(hostname -s)?"
+		Will variable host evaluate to host?
+	echo 'Will variable $myhost evaluate to $(hostname -s)?'
+		Will variable $myhost evaluate to $(hostname -s)?
+
+	Backticks (`...`) = Old style command substitution.  # echo "Files: `ls \`pwd\``"
+	$(...) = Modern, recommended style. # echo "Files: $(ls $(pwd))"
+
+
+
+============================== Udemy ==============================
+Access Linux System
+1. Terminal / Client like putty
+2. Console like GUI or via console cable
+
+
+
+
+
+
+
+
+
+
+

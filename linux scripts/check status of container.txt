@@ -1,0 +1,11 @@
+#!/bin/bash
+function rtp() {
+service=$(docker container ls -f name=rtpengine_rtp_1 | grep 'Up' | wc -l)
+ if (( $service > 0 ))
+ then
+echo "RTP-Engine Status         | Active"
+        else
+echo "RTP-Engine Status         | Inactive"
+        fi
+}
+rtp

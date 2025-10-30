@@ -1,0 +1,13 @@
+****************************check imported keys****************************
+ Print all keys
+ 	rpm -q gpg-pubkey --qf '%{NAME}-%{VERSION}-%{RELEASE}\t%{SUMMARY}\n'
+remove any unwanted key
+	rpm -e gpg-pubkey-b6792c39-53c4fbdd
+
+Guide:
+https://linuxconfig.org/how-to-list-import-and-remove-archive-signing-keys-on-centos-7
+
+****************************check installed serivces****************************
+systemctl list-units --type service --all
+chkconfig --list
+systemctl list-unit-files

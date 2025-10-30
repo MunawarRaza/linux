@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function files_backup() {
+echo '###  taking the backup of custome files  ###'
+mkdir /home/backup-$(date +"%d-%m-%Y")
+cp /var/www/html/intellicon/application/config/config.php /home/backup-$(date +"%d-%m-%Y")/
+cp /var/www/html/intellicon/application/config/yovo_ajam.php /home/backup-$(date +"%d-%m-%Y")/
+cp /etc/node/config/config.json /home/backup-$(date +"%d-%m-%Y")/
+cp /etc/node/config/key.lic /home/backup-$(date +"%d-%m-%Y")/
+cp /etc/node/config/public.pem /home/backup-$(date +"%d-%m-%Y")/
+cp /root/cx9/cx9-servers/config/index.js /home/backup-$(date +"%d-%m-%Y")/
+cp /root/cx9/cx9-servers/cx9-migrations/.env /home/backup-$(date +"%d-%m-%Y")/
+
+echo '###  files backup has been taken ###'
+echo
+echo
+}
+cd /var/www/html/intellicon/
+
+
+
+
+files_backup
+

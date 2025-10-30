@@ -1,0 +1,27 @@
+munawar@ep-ol-jbos2:~/scripts$ cat remot.sh 
+#!/bin/bash
+_remote="10.100.79.71"
+_user="munawar" 
+#_service_name="risk-indicator-service-1.0.0.jar"
+echo "Local system name: $HOSTNAME"
+echo "Local date and time: $(date)"
+ 
+echo
+echo "*** Running commands on remote host named $_remote ***"
+echo
+ssh -T $_remote <<'EOL'
+        now="$(date)"
+        name="$HOSTNAME"
+        up="$(uptime)"
+        #serviceName=$(ps -ef |grep java |grep $_serviceName)
+        echo "Server name is $name"
+        echo "Server date and time is $now"
+        echo "Server uptime: $up"
+        echo "Running service: $serviceName "
+        echo "Bye"
+EOL
+
+
+
+         sshTransfer(execCommand: "cd /opt/deploy/helm;
+         helm upgrade ${RELEASENAME} . --install"),
